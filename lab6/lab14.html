@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!doctype html>
+        <html>
+        <head>
+            <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+            <title>Task 1</title>
+            <link rel="stylesheet" href="css/style.css" type="text/css">
+        </head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 6</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 14</h1></div>
+    <section>
+        <blockquote>
+
+            <p>С помощью replace замените в строке домены вида http://site.ru, http://site.com на <$a href="http://site.ru">site.ru<$/a>
+            </p>
+        </blockquote>
+        <input id="num" value='http://site.ru aa aaa http://site.com'> </input>
+        <button id="button" >Поиск</button>
+        <script>
+            let elem1 = document.getElementById('num');
+            let elem = document.getElementById('button');
+            elem.addEventListener('click', func);
+            function func(){
+                let result = elem1.value;
+                result = result.replace(/http:\/\/site\.[a-z]{2,3}/g,
+                    "<a href=\"http:\/\/site\.ru\">site\.ru<\/a>");
+                elem1.value=result;
+            }
+        </script>
+        <blockquote>
+
+            <p>С помощью replace замените все повторяющиеся пробелы на один. </p></blockquote>
+        <input id="num1" value='12    aa aaa   56'> </input>
+        <button id="button1" >Поиск</button>
+        <script>
+            let elem12 = document.getElementById('num1');
+            let elem13 = document.getElementById('button1');
+            elem13.addEventListener('click', func1);
+            function func1(){
+                let result = elem12.value;
+                result = result.replace(/\s{2}/g, " ");
+                elem12.value=result;
+            }
+        </script>
+        <blockquote>
+        <p>Найдите и удалите все комментарии CSS. </p></blockquote>
+        <input id="num13" value='/*dfdf*/ sadsad'> </input>
+        <button id="button13" >Поиск</button>
+        <script>
+            let elem123 = document.getElementById('num13');
+            let elem133 = document.getElementById('button13');
+            elem133.addEventListener('click', func13);
+            function func13(){
+                let result = elem123.value;
+                result = result.replace(/\/\*.*?\*\//g, "");
+                elem123.value=result;
+            }
+        </script>
+        <blockquote>
+        <p>Найдите и удалите все комментарии HTML</p></blockquote>
+        <input id="num14" value='<!--dfdf--> sadsad <!--ghgh-->'> </input>
+        <button id="button14" >Поиск</button>
+        <script>
+            let elem124 = document.getElementById('num14');
+            let elem134 = document.getElementById('button14');
+            elem134.addEventListener('click', func14);
+            function func14(){
+                let result = elem124.value;
+                result = result.replace("<!--", "");
+                result = result.replace("-->", "");
+                result = result.replace("<!--", "");
+                result = result.replace("-->", "");
+                elem124.value=result;
+            }
+        </script>
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

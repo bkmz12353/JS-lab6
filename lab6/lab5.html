@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 6</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 5</h1></div>
+    <section>
+        <blockquote>
+
+            <p>	2.	Дана строка 'aa aba abba abbba abbbba abbbbba'. Напишите регулярку, которая найдет строки вида aba, в которых 'b' встречается менее 3-х раз (включительно).</p>
+
+        </blockquote>
+        <input id="num" value='aa aba abba abbba abbbba abbbbba'> </input>
+        <button id="button" >Поиск</button>
+        <script>
+            let elem1 = document.getElementById('num');
+            let elem = document.getElementById('button');
+            elem.addEventListener('click', func);
+            function func(){
+                let result = elem1.value;
+                result = result.match(/ab{0,3}a/g);
+                elem1.value=result;
+            }
+        </script>
+
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

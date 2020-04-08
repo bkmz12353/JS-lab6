@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!doctype html>
+        <html>
+        <head>
+            <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+            <title>Task 1</title>
+            <link rel="stylesheet" href="css/style.css" type="text/css">
+        </head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 6</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 16</h1></div>
+    <section>
+        <blockquote>
+
+            <p>2.	Дана строка с целыми числами. Найдите числа, стоящие в кавычках и увеличьте их в два раза. Пример: из строки 2aaa'3'bbb'4' сделаем строку 2aaa'6'bbb'8'</p>
+        </blockquote>
+        <input id="num" value="2aaa'3'bbb'4' "> </input>
+        <button id="button" >Поиск</button>
+        <script>
+            let elem1 = document.getElementById('num');
+            let elem = document.getElementById('button');
+            elem.addEventListener('click', func);
+            function func(){
+
+                let result = elem1.value;
+                result = result.replace(/\d+(?=')/g, function (match) {
+                    return match * 2;
+                });
+                elem1.value=result;
+            }
+        </script>
+
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

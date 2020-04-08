@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 6</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 6</h1></div>
+    <section>
+        <blockquote>
+
+            <p>	Дана строка 'a1a a22a a333a a4444a a55555a aba aca'. Напишите регулярку, которая найдет строки, в которых по краям стоят буквы 'a', а между ними любое количество цифр</p>
+
+        </blockquote>
+        <input id="num" value='a1a a22a a333a a4444a a55555a aba aca'> </input>
+        <button id="button" >Поиск</button>
+        <script>
+            let elem1 = document.getElementById('num');
+            let elem = document.getElementById('button');
+            elem.addEventListener('click', func);
+            function func(){
+                let result = elem1.value;
+                result = result.match(/a\d+a/g);
+                elem1.value=result;
+            }
+        </script>
+
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

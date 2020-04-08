@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 6</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 4</h1></div>
+    <section>
+        <blockquote>
+
+            <p>	•	Дана строка 'aba accca azzza wwwwa'. Напишите регулярку, которая найдет все строки по краям которых стоят буквы 'a', и заменит каждую из них на '!'. Между буквами a может быть любой символ (кроме a). </p>
+        </blockquote>
+        <input id="num" value='aba accca azzza wwwwa'> </input>
+        <button id="button" >Поиск</button>
+        <script>
+            let elem1 = document.getElementById('num');
+            let elem = document.getElementById('button');
+            elem.addEventListener('click', func);
+            function func(){
+                let result = elem1.value;
+                result = result.replace(/^a.+?a$/g, '!');
+                elem1.value=result;
+            }
+        </script>
+
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>
